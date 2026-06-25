@@ -1,0 +1,14 @@
+[package]
+name = "prism-lcd-driver"
+version = "0.1.0"
+edition = "2021"
+description = "Rust driver for the MSI MPG CoreLiquid K360 pump LCD over the MI_00 bulk endpoint (escapes liquidctl's HID 64KB cap). Reverse-engineered from MSI Center, see docs/coreliquid-lcd-protocol.md."
+
+[dependencies]
+nusb = "0.2"
+futures-lite = "2"
+hidapi = "2"
+
+[profile.release]
+opt-level = 3
+lto = true
